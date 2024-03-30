@@ -1,0 +1,19 @@
+.gradient-bg {
+    background: linear-gradient(150deg,lawngreen, lime,limegreen,yellowgreen,lawngreen, lime,limegreen,yellowgreen);
+  }
+  
+  .card-bg{
+      background: linear-gradient(150deg,aquamarine, aqua,blue);
+  }
+  .container-bg{
+      background: linear-gradient(150deg,aquamarine, aqua,blue,aquamarine, aqua,blue);
+  }
+  .img-bg{
+    background: linear-gradient(150deg,darkslategray,dimgray,darkgray);
+
+  }
+  .img-head-bg{
+    background: linear-gradient(150deg,darkslategray);
+
+  }
+  
