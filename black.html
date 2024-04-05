@@ -67,36 +67,41 @@
 <h1 class="ps-5">IMAGES</h1>
 <div class="container my-2 mb-5 rounded container-bg" >
     <div class="row">
-        <div class="col-6 col-sm-4 col-md-4 col-lg-4 px-2 py-2">
-            <div class="card p-1 bg-dark">
-                <img class="rounded"src="imgs/black1.jpeg" alt="Black Clock">
-            </div>
-        </div>
-        <div class="col-6 col-sm-4 col-md-4 col-lg-4 px-2 py-2">
-            <div class="card p-1 bg-dark">
-                <img class="rounded" src="imgs/black2.jpeg" alt="Black Clock">
-            </div>
-        </div>
-        <div class="col-6 col-sm-4 col-md-4 col-lg-4 px-2 py-2">
-                <div class="card p-1 bg-dark">
-                    <img class="rounded" src="imgs/black3.jpeg" alt="Black Clock">
-                </div>
-        </div>
-        <div class="col-6 col-sm-4 col-md-4 col-lg-4 px-2 py-2">
-            <div class="card p-1 bg-dark">
-                <img class="rounded" src="imgs/black4.jpeg" alt="Black Clock">
-            </div>
-        </div>
-        <div class="col-6 col-sm-4 col-md-4 col-lg-4 px-2 py-2">
-            <div class="card p-1 bg-dark">
-                <img class="rounded" src="imgs/black5.jpeg" alt="Black Clock">
-            </div>
-        </div>
-        <div class="col-6 col-sm-4 col-md-4 col-lg-4 px-2 py-2">
-                <div class="card p-1 bg-dark">
-                    <img class="rounded" src="imgs/black6.jpeg" alt="Black Clock">
-                </div>
-        </div>
+        <div id="image-container" class="row">
+
+          </div>
+          
+          <script>
+            const imageUrls = [
+              "imgs/black1.jpeg",
+              "imgs/black2.jpeg",
+              "imgs/black3.jpeg",
+              "imgs/black4.jpeg",
+              "imgs/black5.jpeg",
+              "imgs/black6.jpeg",
+              "imgs/black7.jpeg",
+              "imgs/black8.jpeg"
+            ];
+            const imageContainer = document.getElementById("image-container");
+
+            for (let i = 0; i < imageUrls.length; i++) {
+              const imageDiv = document.createElement("div");
+              imageDiv.className = "col-4 col-sm-4 col-md-3 col-lg-3 px-2 py-2";
+          
+              const cardDiv = document.createElement("div");
+              cardDiv.className = "card p-1 bg-dark";
+          
+              const imgElement = document.createElement("img");
+              imgElement.className = "rounded";
+              imgElement.src = imageUrls[i];
+              imgElement.alt = "Black Clock";
+          
+              cardDiv.appendChild(imgElement);
+              imageDiv.appendChild(cardDiv);
+              imageContainer.appendChild(imageDiv);
+            }
+          </script>
+          
                 
     </div>
 </div>
@@ -105,7 +110,7 @@
 <h1 class="ps-5">VIDEOS</h1>
 <div class="container my-2 mb-5 rounded card-bg" >
     <div class="row">
-<div class="col-6 col-sm-4 col-md-4 col-lg-4 px-2 py-2">
+<div class="col-4 col-sm-4 col-md-3 col-lg-3 px-2 py-2">
     <div class="card p-1 bg-dark">
         <video src="vids/blackv.mp4"></video>
         
