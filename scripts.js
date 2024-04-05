@@ -84,7 +84,7 @@ function openModal(mediaSrc, mediaType, mediaList) {
       nextBtn.disabled = true;
       // Display a message when end of media is reached
       const endMessage = document.createElement("p");
-      endMessage.textContent = "";
+      endMessage.textContent = "End Reached";
       modalEl.querySelector(".modal-body").appendChild(endMessage);
     } else {
       nextBtn.disabled = false;
