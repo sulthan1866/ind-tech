@@ -19,7 +19,7 @@
             <h1 class="text-danger" style="font-size: 35px;">IND-TECH</h1>
         </div>
         <div class="col-3 px-2 py-2 d-flex justify-content-end ">
-            <a href="home.html">
+            <a href="C:\Users\Pc\Desktop\boot ind-tech\home.html">
                 <button>
                     <img class="me-2" src="imgs/home.png" alt="home" height="30px">
                 </button>
@@ -63,26 +63,38 @@
 <h1 class="ps-5">IMAGES</h1>
 <div class="container my-2 mb-5 rounded container-bg " >
     <div class="row">
-        <div class="col-6 col-sm-4 col-md-4 col-lg-4 px-2 py-2">
-            <div class="card p-1 bg-dark">
-                <img class="rounded"src="imgs/small1.jpeg" alt="Small Clock">
-            </div>
+        <div id="image-container" class="row">
+
         </div>
-        <div class="col-6 col-sm-4 col-md-4 col-lg-4 px-2 py-2">
-            <div class="card p-1 bg-dark">
-                <img class="rounded"src="imgs/small2.jpeg" alt="Small Clock">
-            </div>
-            </div>
-        <div class="col-6 col-sm-4 col-md-4 col-lg-4 px-2 py-2">
-                <div class="card p-1 bg-dark">
-                    <img class="rounded"src="imgs/small1.jpeg" alt="Small Clock">
-            </div>
-                </div>
-        <div class="col-6 col-sm-4 col-md-4 col-lg-4 px-2 py-2">
-                    <div class="card p-1 bg-dark">
-                        <img class="rounded"src="imgs/small2.jpeg" alt="Small Clock">
-                    </div>
-                    </div>
+        
+        <script>
+          const imageUrls = [
+            "imgs/small1.jpeg","imgs/small2.jpeg","imgs/small3.jpeg",
+            "imgs/small4.jpeg","imgs/small5.jpeg","imgs/small6.jpeg",
+            "imgs/small7.jpeg","imgs/small8.jpeg","imgs/small9.jpeg",
+            "imgs/small10.jpeg","imgs/small11.jpeg","imgs/small12.jpeg",
+            "imgs/small13.jpeg","imgs/small14.jpeg","imgs/small15.jpeg",
+            "imgs/small16.jpeg","imgs/small17.jpeg"
+          ];
+          const imageContainer = document.getElementById("image-container");
+
+          for (let i = 0; i < imageUrls.length; i++) {
+            const imageDiv = document.createElement("div");
+            imageDiv.className = "col-4 col-sm-4 col-md-3 col-lg-3 px-2 py-2";
+        
+            const cardDiv = document.createElement("div");
+            cardDiv.className = "card p-1 bg-dark";
+        
+            const imgElement = document.createElement("img");
+            imgElement.className = "rounded";
+            imgElement.src = imageUrls[i];
+            imgElement.alt = "small Clock";
+        
+            cardDiv.appendChild(imgElement);
+            imageDiv.appendChild(cardDiv);
+            imageContainer.appendChild(imageDiv);
+          }
+        </script>   
     </div>
 </div>
 <script src="scripts.js"></script>
