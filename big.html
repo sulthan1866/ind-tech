@@ -63,37 +63,44 @@
 <h1 class="ps-5">IMAGES</h1>
 <div class="container my-2 mb-5 rounded container-bg ">
     <div class="row">
-        <div class="col-6 col-sm-4 col-md-4 col-lg-4 px-2 py-2">
-            <div class="card p-1 bg-dark">
-                <img class="rounded"src="imgs/big1.jpeg" alt="Big Clock">
-            </div>
+        <div id="image-container" class="row">
+
         </div>
-        <div class="col-6 col-sm-4 col-md-4 col-lg-4 px-2 py-2">
-            <div class="card p-1 bg-dark">
-                <img class="rounded"src="imgs/big2.jpeg" alt="Big Clock">
-            </div>
-        </div>
-        <div class="col-6 col-sm-4 col-md-4 col-lg-4 px-2 py-2">
-                <div class="card p-1 bg-dark">
-                    <img class="rounded"src="imgs/big3.jpeg" alt="Big Clock">
-                </div>
-        </div>
-        <div class="col-6 col-sm-4 col-md-4 col-lg-4 px-2 py-2">
-            <div class="card p-1 bg-dark">
-                <img class="rounded"src="imgs/big4.jpeg" alt="Big Clock">
-            </div>
-        </div>
-        <div class="col-6 col-sm-4 col-md-4 col-lg-4 px-2 py-2">
-            <div class="card p-1 bg-dark">
-                <img class="rounded"src="imgs/big5.jpeg" alt="Big Clock">
-            </div>
-        </div>
-        <div class="col-6 col-sm-4 col-md-4 col-lg-4 px-2 py-2">
-                <div class="card p-1 bg-dark">
-                    <img class="rounded"src="imgs/big6.jpeg" alt="Big Clock">
-                </div>
-        </div>
-                
+        
+        <script>
+          const imageUrls = [
+            "imgs/big1.jpeg","imgs/big2.jpeg","imgs/big3.jpeg",
+            "imgs/big4.jpeg","imgs/big5.jpeg","imgs/big6.jpeg",
+            "imgs/big7.jpeg","imgs/big8.jpeg","imgs/big9.jpeg",
+            "imgs/big10.jpeg","imgs/big11.jpeg","imgs/big12.jpeg",
+            "imgs/big13.jpeg","imgs/big14.jpeg","imgs/big15.jpeg",
+            "imgs/big16.jpeg","imgs/big17.jpeg","imgs/big18.jpeg",
+            "imgs/big19.jpeg", "imgs/big20.jpeg","imgs/big21.jpeg",
+            "imgs/big22.jpeg","imgs/big23.jpeg","imgs/big24.jpeg",
+            "imgs/big25.jpeg","imgs/big26.jpeg","imgs/big27.jpeg",
+            "imgs/big28.jpeg","imgs/big29.jpeg","imgs/big10.jpeg",
+            "imgs/big11.jpeg","imgs/big12.jpeg","imgs/big13.jpeg",
+            "imgs/big14.jpeg"
+          ];
+          const imageContainer = document.getElementById("image-container");
+
+          for (let i = 0; i < imageUrls.length; i++) {
+            const imageDiv = document.createElement("div");
+            imageDiv.className = "col-4 col-sm-4 col-md-3 col-lg-3 px-2 py-2";
+        
+            const cardDiv = document.createElement("div");
+            cardDiv.className = "card p-1 bg-dark";
+        
+            const imgElement = document.createElement("img");
+            imgElement.className = "rounded";
+            imgElement.src = imageUrls[i];
+            imgElement.alt = "big Clock";
+        
+            cardDiv.appendChild(imgElement);
+            imageDiv.appendChild(cardDiv);
+            imageContainer.appendChild(imageDiv);
+          }
+        </script>   
     </div>
 </div>
 <script src="scripts.js"></script>
