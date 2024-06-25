@@ -1,1 +1,1 @@
-link- ind-tech.netlify.app
+link- https://ind-tech.netlify.app/
