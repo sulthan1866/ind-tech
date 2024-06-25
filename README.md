@@ -1,1 +1,1 @@
-link- ind-tech.netlify.app￼Enter
+link- ind-tech.netlify.app
